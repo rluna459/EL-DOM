@@ -1,0 +1,17 @@
+body{
+    background-color: rgba(160, 16, 218, 0.116);
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    background-color: rgba(81, 67, 133, 0.336);
+    width: 190px;
+    border: 3px solid black;
+    border-radius: 4px;
+    margin-left: 35%;
+}
+p{
+    color: black;
+    font-style: italic;
+}
