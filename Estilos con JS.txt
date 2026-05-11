@@ -1,0 +1,26 @@
+//Asignar Estilos con JavaScript
+Cuando seleccionas un elemento del DOM(por ejemplo con 
+getElementByID ,etc), podes modificar sus estilos usando la 
+propiedad .style (osea la notacion de puntos)
+Ejemplo Basico 
+En el HTML 
+<h1 id="titulo">Hola Mundo</h1>
+<button id="boton">Cambiar estilo</button>
+En el JavaScript
+let titulo = document.getElementById("titulo");
+let boton = document.getElementById("boton");
+
+boton.addEventListener("click", () => {
+  titulo.style.color = "blue";        // cambia color
+  titulo.style.fontSize = "30px";     // cambia tamaño
+  titulo.style.background = "yellow"; // cambia fondo
+});//al hacer click en el boton ,el h1 cambia de estilo
+
+//Cosas que podes modificar con .style
+-Colores -> element.style.color = "red"
+-Fondos -> element.style.background = "black"
+-Tamaños → element.style.width = "200px";
+-Fuentes → element.style.fontFamily = "Arial";
+-Márgenes / padding → element.style.margin = "20px";
+
+que son estilos en linea ?

@@ -1,0 +1,120 @@
+//.getElementById (obtener un elemento por el id)
+let contenedor = document.getElementById("contenedor");
+console.log(contenedor)
+/*Es un metodo de JS que sirve para seleccionar un elemento del HTML
+usando su atributo
+Devuelve una referencia al nodo elemento(ej: <div>,<p>,<h1>)
+Solo funciona si el elemento tiene un id unico en el codumento 
+----------------
+ejemplo basico
+en el HTML:
+<h1 id="titulo">Hola Mundo</h1>
+en el JS:
+let titulo = document.getElementById("titulo");
+console.log(titulo.innerText)//"Hola Mundo"
+selecciona el h1 y lo guarda en la variables titulo
+------------
+Modificar con JS
+titulo.innerText = "Hola Ronaldo"; /cambia el texto
+titulo.style.color = "blue"; /cambia el color
+titulo.style.fonzsize = "30px" /cambia el tamaño 
+getElementById -> devuelve referencia al elemento por su id
+Con esa referencia podés:
+----------------
+1. Leer/modificar texto (innerText, innerHTML)
+let titulo = document.getElementById("titulo");
+console.log(titulo.innerText); // lee el texto
+-
+titulo.innerText = "Nuevo título";
+titulo.innerHTML = "<b>Texto en negrita</b>";
+-------------------
+2. Cambiar estilos (style)
+titulo.style.color = "red";
+titulo.style.fontSize = "30px";
+titulo.style.background = "yellow";
+------------------
+3. Modificar atributos (setAttribute, getAttribute)
+titulo.setAttribute("class", "resaltado");
+console.log(titulo.getAttribute("id")); // devuelve "titulo"
+-----------------
+4. Manejar clases (classList)
+titulo.classList.add("grande");
+titulo.classList.remove("resaltado");
+titulo.classList.toggle("activo"); // alterna la clase
+-------------------
+5. Escuchar eventos (addEventListener)
+titulo.addEventListener("click", () => {
+    alert("Hiciste clic en el título");
+});
+------------------
+6. Manipular hijos (append, remove)
+titulo.append(" 👋"); // agrega contenido al final
+titulo.remove();      // elimina el elemento del DOM
+*/
+
+//getElementByClassName() en el DOM
+Es un elemento de JS que selecciona todos los elementos que 
+tenga una clase especifica
+Devuelveuna coleccion(HTMLCollection),no un solo elemento
+Como es una coleccion, se accede por indice([0],[1],etc)o se recorre con un ciclo
+Ejemplo basico
+En el HTML;
+<p class="texto">Hola</p>
+<p class="texto">Mundo</p>
+En el JS
+let parrafos = document.getElementsByClassName("texto");
+console.log(parrafos[0].innerText); // "Hola"
+console.log(parrafos[1].innerText); // "Mundo"
+----
+Recorrer con ciclo
+for(let i=0; i<parrafos.length; i++){
+    console.log(parrafos[i].innerText)
+}
+
+//getElementByTagName()
+Es un metodo en JS que selecciona todos los elementos de una etiqueta
+especifica (ej: todos los <p>, todos los <div>)
+devuelve una coleccion (HTMLCollection, no solo un elemento)
+Como es una coleccion, se accede con indices([0],[1],etc..)
+o se recorre con un ciclo
+
+Ejemplo basico
+En el HTML 
+<p>Hola</p>
+<p>Mundo</p>
+<p>Ronaldo</p>
+
+En el JS
+let parrafos = document.getElementsByTagName("p");
+console.log(parrafos[0].innerText); // "Hola"
+console.log(parrafos[1].innerText); // "Mundo"
+console.log(parrafos[2].innerText); // "Ronaldo"
+----
+Recorrer con un ciclo
+for (let i = 0; i < parrafos.length; i++ ){
+    console.log(parrafos[i].innerText);
+}
+
+//querySelector() en el DOM
+Es un metodo de JS que selecciona el primer elemento que coincida con un 
+selector CSS 
+Devuelveuna referencia al nodo elemento
+si no encuentra nada ,devuelve null
+Ejemplo basico
+En el HTML 
+<h1 id="titulo">Hola</h1>
+<p class="texto">Mundo</p>
+<p class="texto">Ronaldo</p>
+En el JS
+let titulo = document.querySelector("#titulo");   // por id
+let parrafo = document.querySelector(".texto");   // por clase
+let primerP = document.querySelector("p");        // por etiqueta
+console.log(titulo.innerText); // "Hola"
+console.log(parrafo.innerText); // "Mundo"
+console.log(primerP.innerText); // "Mundo"
+-------------------------------------------------------------------------------------------------------------------------------
+//querySelectorAll() 
+Es un metodo de JS que selecciona todos los elementos que coincidan con in selector CSS 
+Devuelve una nodelist (similar a un array)
+A diferencia de querySelector(), no devuelve solo el primero, sino todos los que coincidan 
+Podes recorrerlos con un for ,forEach, o acceder por indice ([0],[1],etc)

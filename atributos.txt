@@ -1,0 +1,8 @@
+//Atributos
+const enlace = document.getElementsByTagName("a")
+//Para Obtener ese atributo entre comillas 
+console.log(enlace[0].getAttribute("href"))
+//Para eliminar ese atributo 
+console.log(enlace[0].removeAttribute("href"))
+//Para modificarlo 
+console.log("href", "https://www.freecodecamp.org")//primer argumento el atributo a personalizar y como segundo argumento el valor que le quiero asignar

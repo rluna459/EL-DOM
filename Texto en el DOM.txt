@@ -1,0 +1,13 @@
+//Acceder al texto//
+const listaDeToppings = document.getElementById("lista-toppings")
+//innerText//
+console.log(listaDeToppings.innerText)
+//textContent//
+console.log(listaDeToppings.textContent)
+//innerHTML//
+console.log(listaDeToppings.innerHTML)
+-------------------------------------------
+//Modificar el texto//
+const titulo =document.getElementById("titulo")
+titulo.innerText = "Mis Toppings Favoritos"
+--------------------------------------------

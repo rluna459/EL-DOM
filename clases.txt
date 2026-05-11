@@ -1,0 +1,18 @@
+//Clases 
+classList en el DOM
+-Es una propiedad de los elementos que devuelve un objeto con todas las clases que tiene ese elemento.
+-Permite agregar, quitar, alternar y verificar clases de forma sencilla.
+-Es mucho más práctico que usar setAttribute("class", ...).
+Metodos Principales
+1.add() → agrega una o más clases.
+element.classList.add("rojo", "grande")
+2.remove() → elimina una o más clases
+element.classList.remove("rojo");
+3.toggle() → alterna una clase (si está la quita, si no está la agrega).
+element.classList.toggle("activo");
+4.contains() → verifica si el elemento tiene una clase.
+if (element.classList.contains("rojo")) {
+  console.log("El elemento es rojo");
+}
+5.replace()→ reemplaza una clase por otra
+element.classList.replace("rojo", "azul");

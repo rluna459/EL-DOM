@@ -1,0 +1,29 @@
+//Primero se Necesita una referencia del elemento
+const listaDeToppings = document.getElementById("lista-toppings");
+//Recorrer el DOM 
+//Elemento <> Nodo
+//Elemento
+console.log(listaDeToppings.parentElement)
+//Nodo Padre
+console.log(listaDeToppings.parentNode)
+//El padre del padre 
+console.log(listaDeToppings.parentNode.parentNode)
+//Nodo Hijos
+console.log(listaDeToppings.children)
+//Primer Nodo Hijo
+console.log(listaDeToppings.firstChild)
+//Priimer Nodo Hijo
+console.log(listaDeToppings.children[0])
+//esta es mas practica
+console.log(listaDeToppings.firstElementChild)
+//El ultimo elemento hijo
+console.log(listaDeToppings.lastElementChild)
+//Elemento Hermanos (al mismo nivel en la jerarquia)
+//Hermano Previo
+console.log(listaDeToppings.previousElementSibling)
+//Hermano Proximo 
+console.log(listaDeToppings.nextElementSibling)
+//Version de Nodos//normalmente trabajamos con element
+console.log(listaDeToppings.nextSibling)
+console.log(listaDeToppings.previousSibling)
+//sieempre verificar que no sea null recomendacion 

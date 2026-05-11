@@ -1,0 +1,61 @@
+//EVENTOS DEL DOM   
+-Evento: "algo" que ocurre en el sitio web como resultado de interaccion
+con el usuario o por otra causa como cambios en el estado
+del dispositivo o de la ventana
+ejemplo : click del mouse, presionar una tecla, cambios de tamaño del navegador
+, arrastrar ,eventos en dispositivos touch, y muchos mas que podemos manejar 
+Mas comunes
+cursor y teclado
+//Conceptos Importantes
+1-Elemento target (blanco):
+Es la propiedad del objeto evento que indica el elemento exacto que disparo 
+el evento
+    por ejemplo: si haces click en un boton, event.target sera ese boton
+2-Trigger(Disparador):
+Es la accion del usuario o del sistema que provoca que un evento
+ocurra
+    por ejemplo: clicl del mouse, presionar una tecla, cargar la pagina, mover el cursor
+    trigger es lo que inicioa todo
+3-Event Handler(manejador de eventos)
+Es la funcion que se ejecuta cuando ocurre el evento
+    por ejemplo :
+    function mostrarMensaje() {
+        alert("Hiciste clic");
+    }
+esa funcion es el Handler
+4-Event Listener(escuchador de eventos)
+Es el mecanismo que conecta el evento con el Handler
+Se usa con addEventListner
+    por ejemplo:
+    let boton = document.getElementById("btn");
+    boton.addEventListener("click", mostrarMensaje);
+El listener esta "escuchando" el trigger(click) y ejecuta el Handler
+<!-- 
+Eventos en el DOM:
+- event.target -> elemento que disparó el evento
+- trigger -> acción que provoca el evento (clic, tecla, etc.)
+- event handler -> función que se ejecuta cuando ocurre el evento
+- event listener -> conecta el evento con el handler (addEventListener)
+-->
+Cuando ocurra un evento especifico le daremos una funcion especifica
+----------IMPORTANTE-----------
+const toppings = document.getElementsByClassName("topping")
+//con una funcion normal
+/*function mostrarClick(e){
+    console.log(e.target.innerText);
+}
+
+for (const topping of toppings ){
+    topping.addEventListener("click", mostrarClick)
+}
+*/
+//con una funcion mas corta
+for (const topping of toppings){
+    topping.addEventListener("click", (e) => {
+        console.log(e.target.innerText);
+    })
+}
+
+
+//Event Listener: dos argumentos ,primero el nombre del evento que hay , en el segundo la funcion que va a manejar ese evento
+//albahaca.addEventListener("click", mostrarClick) //en el nombre de la funcion cuando lo paso como argumento no pongo los ()
